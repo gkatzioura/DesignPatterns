@@ -1,6 +1,8 @@
 package com.gkatzioura.design.structural.facade;
 
+import java.util.ArrayList;
 import java.util.Date;
+import java.util.List;
 import java.util.UUID;
 
 public class UserUsageFacadeImpl implements UserUsageFacade {
@@ -19,17 +21,17 @@ public class UserUsageFacadeImpl implements UserUsageFacade {
     }
 
     @Override
-    public String[][] usageOn(UUID user, Date from, Double lat, Double lng) {
+    public List<UserUsage> usageOn(UUID user, Date from, Double lat, Double lng) {
 
-        String[][] locationData = geolocationReport.generate(lat,lng,DEFAULT_DISTANCE);
+        List<LocationInformation> locationInformationData = geolocationReport.generate(lat, lng, DEFAULT_DISTANCE);
         Date to = Date.from(from.toInstant().plusSeconds(DEFAULT_TIME_RANGE));
-        String[][] timeSetiesData = timeSeriesReport.generate(from,to);
-        String[][] usageData = usageReport.report(user);
+        List<TimeInformation> timeSetiesData = timeSeriesReport.generate(from, to);
+        List<Usage> usageData = usageReport.report(user);
 
         /**
          * Generate the report based on the data retrieved
          */
 
-        return new String[][] {};
+        return new ArrayList<>();
     }
 }
