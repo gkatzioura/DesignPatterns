@@ -1,4 +1,4 @@
-package com.gkatzioura.design.behavioral.cor;
+package com.gkatzioura.design.behavioural.cor;
 
 public class RoadIncident {
 

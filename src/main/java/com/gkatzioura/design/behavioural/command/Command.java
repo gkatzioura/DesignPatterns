@@ -1,4 +1,4 @@
-package com.gkatzioura.design.behavioral.command;
+package com.gkatzioura.design.behavioural.command;
 
 import java.util.ArrayList;
 import java.util.List;

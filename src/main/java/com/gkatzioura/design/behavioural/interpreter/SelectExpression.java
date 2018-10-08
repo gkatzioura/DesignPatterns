@@ -1,4 +1,4 @@
-package com.gkatzioura.design.behavioral.interpreter;
+package com.gkatzioura.design.behavioural.interpreter;
 
 public class SelectExpression implements Expression {
 

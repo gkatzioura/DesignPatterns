@@ -1,4 +1,4 @@
-package com.gkatzioura.design.behavioral.interpreter;
+package com.gkatzioura.design.behavioural.interpreter;
 
 import java.util.Optional;
 

@@ -1,4 +1,4 @@
-package com.gkatzioura.design.behavioral.command;
+package com.gkatzioura.design.behavioural.command;
 
 public class BackingCommand implements BetCommand {
 
