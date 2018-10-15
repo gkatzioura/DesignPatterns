@@ -8,10 +8,4 @@ public class BetBook {
          */
     }
 
-    public void addLaying(String match, Integer amount) {
-        /**
-         * Add the laying to the book
-         */
-    }
-
 }
