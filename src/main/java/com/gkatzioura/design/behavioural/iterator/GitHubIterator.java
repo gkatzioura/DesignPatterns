@@ -32,10 +32,18 @@ public class GitHubIterator implements Iterator<GitHubJob> {
     }
 
     private void fetchPageIfNeeded() {
+        if(page == -1) {
+            return;
+        }
+
         if(currentJobsPage==null||currentJobsPage.size()==0) {
             try {
                 currentJobsPage = gitHubJobsRepository.fetch(page);
-                page++;
+                if(currentJobsPage.size()==0) {
+                    page = -1;
+                } else {
+                    page++;
+                }
             } catch (Exception e) {
                 throw new RuntimeException();
             }
